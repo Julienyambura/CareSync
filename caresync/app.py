@@ -4,6 +4,28 @@ from mental_health import mood_tracker, journal, mood_trends
 from common import database, utils
 from common.notifications import notification_manager
 
+# Initialize session state variables
+if 'notification_settings' not in st.session_state:
+    st.session_state.notification_settings = {
+        'email_enabled': False,
+        'email_address': '',
+        'email_password': '',
+        'desktop_enabled': False,
+        'mobile_enabled': False
+    }
+
+if 'medications' not in st.session_state:
+    st.session_state.medications = []
+
+if 'mood_entries' not in st.session_state:
+    st.session_state.mood_entries = []
+
+if 'journal_entries' not in st.session_state:
+    st.session_state.journal_entries = []
+
+if 'medication_log' not in st.session_state:
+    st.session_state.medication_log = []
+
 # Custom CSS for beautiful styling
 st.set_page_config(
     page_title="CareSync", 
