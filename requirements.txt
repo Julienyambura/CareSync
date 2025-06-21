@@ -1,0 +1,9 @@
+streamlit
+openai
+plotly
+pandas
+plyer
+requests
+# Optional free AI alternatives:
+# transformers
+# torch 
